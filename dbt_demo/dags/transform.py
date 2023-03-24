@@ -15,20 +15,20 @@ default_args = {
 }
 
 dag = DAG(
-    'dbt_airflow_init',
+    'dbt_airflow_transform',
     default_args=default_args,
-    description='A simple dbt and Airflow init DAG',
-    schedule_interval='@once',
+    description='A simple dbt and Airflow transformation DAG',
+    schedule_interval='@daily',
 )
 
 
 # Define dbt commands as bash commands
-dbt_seed = BashOperator(
-    task_id='dbt_seed',
-    bash_command='cd /yt_demo && dbt seed --profiles-dir .',
+dbt_run = BashOperator(
+    task_id='dbt_run',
+    bash_command='/yt_demo/transformation && dbt run --profiles-dir .',
     dag=dag,
 )
 
 
 # Set up dependencies between tasks
-dbt_seed
+dbt_run
