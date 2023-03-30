@@ -49,7 +49,7 @@ jobs:
         run: |
           pwd
           ls
-          cd dbt_demo/yt_demo/
+          cd dbt_demo/dbt_project/
           pwd
           ls
           dbt run
@@ -58,5 +58,5 @@ jobs:
         run: |
           pwd
           ls
-          cd dbt_demo/yt_demo/
+          cd dbt_demo/dbt_project/
           dbt test
