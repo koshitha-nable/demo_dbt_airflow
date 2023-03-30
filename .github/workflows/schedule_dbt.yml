@@ -38,7 +38,7 @@ jobs:
           ls
           cd dbt_demo
           pwd
-          cd yt_demo/
+          cd dbt_project/
           pwd
           ls
           pip install dbt-snowflake
