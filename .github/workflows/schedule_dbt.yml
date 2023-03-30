@@ -36,7 +36,7 @@ jobs:
         run: | 
           pwd
           ls
-          cd dbt_demo
+          cd dockerairflow
           pwd
           cd dbt_project/
           pwd
@@ -49,7 +49,7 @@ jobs:
         run: |
           pwd
           ls
-          cd dbt_demo/dbt_project/
+          cd dockerairflow/dbt_project/
           pwd
           ls
           dbt run
@@ -58,5 +58,5 @@ jobs:
         run: |
           pwd
           ls
-          cd dbt_demo/dbt_project/
+          cd dockerairflow/dbt_project/
           dbt test
