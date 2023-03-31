@@ -10,6 +10,7 @@ models:
         tests:
           - unique
           - not_null
+          - type: "string"
           
       - name: total
         description: "The total count of videos in the genre"
