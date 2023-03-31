@@ -11,7 +11,7 @@ models:
           - unique
           - not_null
           
-      - name: TOTAL
+      - name: total
         description: "The total count of videos in the genre"
         tests:
           - not_null
