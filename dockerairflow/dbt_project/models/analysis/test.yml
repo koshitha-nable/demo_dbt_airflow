@@ -10,3 +10,24 @@ models:
         tests:
           - unique
           - not_null
+          
+      - name: total
+        description: "The total count of videos in the genre"
+        tests:
+          - not_null
+          - type: integer
+      - name: maximum
+        description: "The maximum value of A in the genre"
+        tests:
+          - not_null
+          - type: integer
+      - name: minimum
+        description: "The minimum value of A in the genre"
+        tests:
+          - not_null
+          - type: integer
+      - name: average
+        description: "The average value of A in the genre"
+        tests:
+          - not_null
+          - type: float
