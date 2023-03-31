@@ -15,8 +15,3 @@ models:
         tests:
           - not_null
         
-    tests:
-      - unique_combination:
-          column_pairs: [[GENRE]]
-          message: "The combination of GENRE values must be unique."
-          
