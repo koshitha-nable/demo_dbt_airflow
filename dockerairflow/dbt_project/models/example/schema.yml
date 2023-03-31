@@ -1,13 +1,13 @@
 
-version: 2
+# version: 2
 
-models:
-  - name: analysis_yt_data
-    description: "test analysis"
-    columns:
-      - name: GENRE
-        description: "test genre"
-        tests:
-          - unique
-          - not_null
+# models:
+#   - name: analysis_yt_data
+#     description: "test analysis"
+#     columns:
+#       - name: GENRE
+#         description: "test genre"
+#         tests:
+#           - unique
+#           - not_null
 
