@@ -58,6 +58,6 @@ jobs:
         run: |
           pwd
           ls
-          cd dockerairflow/dbt_project/tests
+          cd dockerairflow/dbt_project/
           pwd
           dbt test
