@@ -8,7 +8,7 @@ on:
   push:
     branches:
       # run on push to development branch
-      - main
+      - ka/feature/staging
 
 env:
   DBT_PROFILES_DIR: ./
