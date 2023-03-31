@@ -1,37 +1,25 @@
-dbt_demo:
-  outputs:
-    dev:
-      account: ykzjwal-ar56104
-      database: ANALYTICS
-      password: Kaviandlilo94
-      role: ACCOUNTADMIN
-      schema: PUBLIC
-      threads: 10
-      type: snowflake
-      user: KavindiMudunkotuwa
-      warehouse: COMPUTE_WH
-  target: dev
 dbt_project:
   outputs:
     dev:
-      account: ykzjwal-ar56104
+      account: jtrkojp-aq61018
       database: ANALYTICS
-      password: Kaviandlilo94
+      password: koshitha@1234A
       role: ACCOUNTADMIN
       schema: PUBLIC
       threads: 10
       type: snowflake
-      user: KavindiMudunkotuwa
-      warehouse: COMPUTE_WH
-      
-     prod:
-      account: ykzjwal-ar56104
+      user: KOSHITHA
+      warehouse: TRANSFORMING
+
+    prod:
+      account: jtrkojp-aq61018
       database: ANALYTICS
-      password: Kaviandlilo94
+      password: koshitha@1234A
       role: ACCOUNTADMIN
       schema: PUBLIC
       threads: 10
       type: snowflake
-      user: KavindiMudunkotuwa
-      warehouse: COMPUTE_WH
+      user: KOSHITHA
+      warehouse: TRANSFORMING
+    
   target: dev
