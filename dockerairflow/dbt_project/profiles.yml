@@ -1,6 +1,5 @@
-
-dbt_project:
-   outputs:
+demo_dbt:
+  outputs:
     dev:
       account: jtrkojp-aq61018
       database: ANALYTICS
@@ -11,7 +10,7 @@ dbt_project:
       type: snowflake
       user: KOSHITHA
       warehouse: TRANSFORMING
-     
+
     prod:
       account: jtrkojp-aq61018
       database: ANALYTICS
@@ -22,4 +21,5 @@ dbt_project:
       type: snowflake
       user: KOSHITHA
       warehouse: TRANSFORMING
+    
   target: dev
