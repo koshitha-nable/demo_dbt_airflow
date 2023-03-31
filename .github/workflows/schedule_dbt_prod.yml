@@ -1,4 +1,4 @@
-name: dbt_prod
+name: schedule_dbt_prod
 
 on:
   schedule:
@@ -21,14 +21,14 @@ env:
 
 jobs:
   schedule_dbt_run:
-    name: schedule_dbt_run
+    name: schedule_dbt_prod_run
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@ka/feature/staging
 
-      - uses: actions/setup-python@v1
+      - uses: actions/setup-python@v3
         with:
           python-version: "3.7.x"
 
