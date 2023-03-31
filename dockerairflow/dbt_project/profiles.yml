@@ -1,4 +1,4 @@
-demo_dbt:
+dbt_project:
   outputs:
     dev:
       account: jtrkojp-aq61018
