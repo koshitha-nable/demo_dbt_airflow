@@ -1,4 +1,4 @@
-name: schedule_dbt
+name: dbt_prod
 
 on:
   schedule:
