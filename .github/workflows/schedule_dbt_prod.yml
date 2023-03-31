@@ -1,4 +1,4 @@
-name: schedule_dbt
+name: dbt_prod
 
 on:
   schedule:
@@ -8,7 +8,7 @@ on:
   push:
     branches:
       # run on push to development branch
-      - main
+      - ka/feature/staging
 
 env:
   DBT_PROFILES_DIR: ./
@@ -26,7 +26,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@main
+        uses: actions/checkout@ka/feature/staging
 
       - uses: actions/setup-python@v1
         with:
@@ -42,7 +42,7 @@ jobs:
           pwd
           ls
           pip install dbt-snowflake
-          dbt deps
+          dbt deps --target prod
 
       # dbt related commands here - run use --target prod/dev to run for specific environments
       - name: Run dbt models
@@ -52,11 +52,11 @@ jobs:
           cd dockerairflow/dbt_project/
           pwd
           ls
-          dbt run
+          dbt run --target prod
 
       - name: Test dbt models
         run: |
           pwd
           ls
           cd dockerairflow/dbt_project/
-          dbt test
+          dbt test --target prod
