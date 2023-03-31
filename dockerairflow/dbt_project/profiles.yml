@@ -23,4 +23,15 @@ dbt_project:
       type: snowflake
       user: KavindiMudunkotuwa
       warehouse: COMPUTE_WH
+      
+     prod:
+      account: ykzjwal-ar56104
+      database: ANALYTICS
+      password: Kaviandlilo94
+      role: ACCOUNTADMIN
+      schema: PUBLIC
+      threads: 10
+      type: snowflake
+      user: KavindiMudunkotuwa
+      warehouse: COMPUTE_WH
   target: dev
