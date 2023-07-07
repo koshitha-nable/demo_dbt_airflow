@@ -24,7 +24,7 @@ dag = DAG(
 # Define dbt commands as bash commands
 dbt_seed = BashOperator(
     task_id='dbt_seed',
-    bash_command='cd /dbt_project && dbt seed --profiles-dir .',
+    bash_command='cd ../dbt_project && dbt seed --profiles-dir .',
     dag=dag,
 )
 

@@ -25,13 +25,13 @@ dag = DAG(
 # Define dbt commands as bash commands
 dbt_run = BashOperator(
     task_id='dbt_run',
-    bash_command='cd /dbt_project/analysis && dbt run --profiles-dir .',
+    bash_command='cd ../dbt_project/models/analysis && dbt run --profiles-dir .',
     dag=dag,
 )
 
 dbt_compile = BashOperator(
     task_id='dbt_compile',
-    bash_command='cd /yt_demo/analysis && dbt compile --profiles-dir .',
+    bash_command='cd ../dbt_project/models/analysis && dbt compile --profiles-dir .',
     dag=dag,
 )
 
