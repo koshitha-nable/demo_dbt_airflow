@@ -1,5 +1,5 @@
-{{ config( materialized='table', table_name='analysis_yt_data' ) }}
 
+WITH summary AS (
 SELECT
     GENRE,
     COUNT(A) as total,
@@ -7,5 +7,11 @@ SELECT
     MIN(A) as minimum, 
     AVG(A) as average
     
-FROM YT
+FROM {{ref('int_yt')}}
 GROUP BY GENRE
+)
+
+SELECT * FROM summary
+
+
+
