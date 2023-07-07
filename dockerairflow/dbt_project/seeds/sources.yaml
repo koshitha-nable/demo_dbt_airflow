@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: yt_csv
+    database: yt_demo_db 
+    schema: dev_source
+    tables:
+      - name: yt
