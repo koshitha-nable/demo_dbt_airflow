@@ -41,3 +41,21 @@ docker --version
 ```
 You should see the Docker version information printed in the terminal.
 
+### Install the project dependencies:
+```sh
+pip install -r requirements.txt
+```
+### Running the container
+
+1. start required docker services with docker-compose-initiate database
+    ```sh
+     docker compose up airflow-init
+    ```
+    Running Airflow:
+    ```sh
+    docker compose up
+    ```
+2. check all docker application services up and running 
+    ```sh
+    $ sudo docker ps
+    ```
