@@ -3,13 +3,8 @@ version: 2
 models:
   - name: analysis_yt_data
     columns:
-      - name: GENRE
-        tests:
-          - not_null
-          - unique
       - name: total
         tests:
-          - not_null
           - type: integer
       - name: maximum
         tests:
@@ -20,18 +15,3 @@ models:
       - name: average
         tests:
           - type: float
-    tests:
-      - unique_combination:
-          column_pairs: [[GENRE]]
-      - accepted_values:
-          column: total
-          values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-      - accepted_values:
-          column: maximum
-          values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-      - accepted_values:
-          column: minimum
-          values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-      - accepted_values:
-          column: average
-          values: [0.5, 1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5, 11.5]

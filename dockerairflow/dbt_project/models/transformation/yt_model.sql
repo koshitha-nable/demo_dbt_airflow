@@ -1,6 +1,8 @@
-{{config(materialized = 'table', table_name = 'yt_model')}}
+{{ config( materialized='table' ) }}
+
 SELECT 
-    GENRE,    
+    a as id,
+    "Genre",    
     COUNT(A) as total
-FROM YT
-Group BY GENRE
+FROM {{source('src','yt')}}
+Group BY "Genre", id
