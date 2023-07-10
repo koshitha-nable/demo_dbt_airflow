@@ -1,0 +1,14 @@
+dbt_project:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: admin # replace with real username
+      pass: postgres # replace with real password
+      port: 5432
+      dbname: test
+      schema: test
+      threads: 4
+    
+  target: dev

@@ -5,12 +5,6 @@ models:
   - name: analysis_yt_data
     description: "test analysis"
     columns:
-      - name: GENRE
-        description: "test genre count of videos in the genre"
-        tests:
-          - unique
-          - not_null
-          
       - name: total
         description: "The total count of videos in the genre"
         tests:

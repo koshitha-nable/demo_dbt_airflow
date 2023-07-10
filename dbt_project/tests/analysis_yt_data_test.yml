@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: analysis_yt_data
+    columns:
+      - name: total
+        tests:
+          - type: integer
+      - name: maximum
+        tests:
+          - type: integer
+      - name: minimum
+        tests:
+          - type: integer
+      - name: average
+        tests:
+          - type: float
